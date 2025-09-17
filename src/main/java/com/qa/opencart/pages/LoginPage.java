@@ -30,7 +30,7 @@ public class LoginPage {
 	private final By loginBtn = By.xpath("//input[@value= 'Login']");
 	private final By registerLink = By.linkText("Register");
 	private final By loginErrorMessg = By.cssSelector("div.alert.alert-danger.alert-dismissible");
-	private final By demoLocator = By.cssSelector("demo Locator for github");
+	
 
 	// public constructor:
 	
