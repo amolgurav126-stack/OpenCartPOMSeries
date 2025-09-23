@@ -26,7 +26,7 @@ public class LoginPageTest extends BaseTest{
 	 *If you have a webdriver APIs in your test class/methods, you're doing it wrong--simon stewart
 	 */
 	
-	@Description("Login page title test....")
+	@Description("Login page title test.....")
 	@Owner("Amol Gurav")
 	@Severity(SeverityLevel.MINOR)
 	@Test
