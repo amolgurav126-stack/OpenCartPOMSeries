@@ -16,7 +16,7 @@ public class LoginPage {
 	private ElementUtil eleUtil;
 	private static final Logger log = LogManager.getLogger(LoginPage.class);
 	/**
-	 * Page class is responsible for behaviour of the page. Don't write testng annotations here.
+	 * Page class is responsible for behaviour of the page.. Don't write testng annotations here.
 	 * page class is classic example of encapsulation.
 	 * Hw-- Add more test cases for login page.
 	 */
