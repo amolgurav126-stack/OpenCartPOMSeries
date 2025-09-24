@@ -13,7 +13,7 @@ pipeline
             steps
             {
                  git 'https://github.com/jglick/simple-maven-project-with-tests.git'
-                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
+                 bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
             post 
             {
@@ -39,8 +39,8 @@ pipeline
         stage('Regression Automation Tests') {
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    git 'https://github.com/naveenanimation20/March2025POMDesign.git'
-                    sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_regression.xml -Denv=qa"
+                    git 'https://github.com/amolgurav126-stack/OpenCartPOMSeries.git'
+                    bat "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_regression.xml -Denv=qa"
                     
                 }
             }
@@ -85,8 +85,8 @@ pipeline
         stage('Sanity Automation Test') {
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    git 'https://github.com/naveenanimation20/March2025POMDesign.git'
-                    sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_sanity.xml -Denv=stage"
+                    git 'https://github.com/amolgurav126-stack/OpenCartPOMSeries.git'
+                    bat "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/sanity.xml -Denv=stage"
                     
                 }
             }
@@ -117,8 +117,8 @@ pipeline
         stage('Sanity Automation Test on PROD') {
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    git 'https://github.com/naveenanimation20/March2025POMDesign.git'
-                    sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_sanity.xml -Denv=prod"
+                    git 'https://github.com/amolgurav126-stack/OpenCartPOMSeries.git'
+                    bat "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/sanity.xml -Denv=prod"
                     
                 }
             }
